@@ -1,6 +1,6 @@
 {
   "name": "react-native-headless-code-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A headless hook to handle verification code input.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
-    "pub": "npm version patch && publish",
+    "pub": "npm version patch && npm publish",
     "lint": "tslint --fix -p ./tsconfig.json"
   },
   "devDependencies": {
