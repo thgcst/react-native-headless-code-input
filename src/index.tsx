@@ -25,7 +25,7 @@ interface Return {
 }
 
 const useCodeInput = (props: Props): Return => {
-  const { length, onFulfill } = props;
+  const { length, onFulfill, onChangeText: changeText } = props;
   const inputRef = useRef<TextInput>(null);
 
   const [inputValue, setInputValue] = useState('');
@@ -38,7 +38,7 @@ const useCodeInput = (props: Props): Return => {
 
   const onChangeText = (e: string) => {
     setInputValue(e);
-    onChangeText(e)
+    changeText?.(e)
     setFields(fields.map((_:Field, id:number) => ({ value: e[id] || '', id })));
     setFocusedId(e.length);
     if (onFulfill && e.length === length) {
