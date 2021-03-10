@@ -1,9 +1,14 @@
 {
   "name": "react-native-code-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A headless hook to handle verification code input.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "author": {
+    "name": "Thiago Costa",
+    "email": "thiagodias2708@gmail.com",
+    "url": "https://github.com/thgcst"
+  },
   "files": [
     "lib/**/*"
   ],
