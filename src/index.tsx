@@ -8,6 +8,7 @@ interface Props {
    */
   length: number;
   onFulfill?: (code: string) => void;
+  onChangeText?: (code: string) => void
 }
 
 interface Field {
@@ -20,6 +21,7 @@ interface Return {
   inputProps: TextInputProps & { ref: React.RefObject<TextInput> };
   fields: Field[];
   focusedId: number | null;
+  value: string;
 }
 
 const useCodeInput = (props: Props): Return => {
@@ -36,6 +38,7 @@ const useCodeInput = (props: Props): Return => {
 
   const onChangeText = (e: string) => {
     setInputValue(e);
+    onChangeText(e)
     setFields(fields.map((_:Field, id:number) => ({ value: e[id] || '', id })));
     setFocusedId(e.length);
     if (onFulfill && e.length === length) {
@@ -70,6 +73,7 @@ const useCodeInput = (props: Props): Return => {
     },
     fields,
     focusedId,
+    value: inputValue
   };
 };
 

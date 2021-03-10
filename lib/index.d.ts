@@ -6,6 +6,7 @@ interface Props {
      */
     length: number;
     onFulfill?: (code: string) => void;
+    onChangeText?: (code: string) => void;
 }
 interface Field {
     value: string;
@@ -18,6 +19,7 @@ interface Return {
     };
     fields: Field[];
     focusedId: number | null;
+    value: string;
 }
 declare const useCodeInput: (props: Props) => Return;
 export default useCodeInput;
