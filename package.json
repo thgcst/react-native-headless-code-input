@@ -1,6 +1,6 @@
 {
   "name": "react-native-headless-code-input",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A headless hook to handle verification code input.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,6 +8,14 @@
     "name": "Thiago Costa",
     "email": "thiagodias2708@gmail.com",
     "url": "https://github.com/thgcst"
+  },
+  "bugs": {
+    "url": "https://github.com/thgcst/react-native-headless-code-input/issues"
+  },
+  "homepage": "https://github.com/thgcst/react-native-headless-code-input",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thgcst/react-native-headless-code-input"
   },
   "files": [
     "lib/**/*"
