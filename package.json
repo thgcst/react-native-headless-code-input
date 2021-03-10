@@ -1,5 +1,5 @@
 {
-  "name": "react-native-code-input",
+  "name": "react-native-headless-code-input",
   "version": "1.0.1",
   "description": "A headless hook to handle verification code input.",
   "main": "lib/index.js",
