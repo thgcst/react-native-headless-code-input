@@ -1,0 +1,23 @@
+{
+  "name": "react-native-code-input",
+  "version": "1.0.0",
+  "description": "A headless hook to handle verification code input.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project ./tsconfig.json",
+    "pub": "npm version patch && publish",
+    "lint": "tslint --fix -p ./tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-native": ">=0.59.0"
+  }
+}
