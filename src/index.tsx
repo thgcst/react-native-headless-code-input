@@ -7,7 +7,7 @@ interface Props {
    * Code length
    */
   length: number;
-  onFullFil?: (code: string) => void;
+  onFulfill?: (code: string) => void;
 }
 
 interface Field {
@@ -23,7 +23,7 @@ interface Return {
 }
 
 const useCodeInput = (props: Props): Return => {
-  const { length, onFullFil } = props;
+  const { length, onFulfill } = props;
   const inputRef = useRef<TextInput>(null);
 
   const [inputValue, setInputValue] = useState('');
@@ -38,8 +38,8 @@ const useCodeInput = (props: Props): Return => {
     setInputValue(e);
     setFields(fields.map((_:Field, id:number) => ({ value: e[id] || '', id })));
     setFocusedId(e.length);
-    if (onFullFil && e.length === length) {
-      onFullFil(e);
+    if (onFulfill && e.length === length) {
+      onFulfill(e);
     }
   };
 

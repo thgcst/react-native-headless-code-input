@@ -5,7 +5,7 @@ interface Props {
      * Code length
      */
     length: number;
-    onFullFil?: (code: string) => void;
+    onFulfill?: (code: string) => void;
 }
 interface Field {
     value: string;
