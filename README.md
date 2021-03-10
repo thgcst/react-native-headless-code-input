@@ -23,18 +23,20 @@ yarn add react-native-headless-code-input
 
 ```tsx static
 import React from 'react';
-import { TextInput } from 'react-native';
+import { TextInput, TouchableOpacity } from 'react-native';
 import useCodeInput from 'react-native-headless-code-input';
 
 import { Container, Wrapper, Field, Value } from './styles';
 
 const App: React.FC = () => {
-  const { wrapperProps, fields, inputProps, focusedId } = useCodeInput({
+  const { wrapperProps, fields, inputProps, focusedId, value } = useCodeInput({
     length: 4,
+    onFulfill: (code) => handleSubmit(code),
+    onChangeText: (code) => handleChange(code),
   });
   return (
     <Container>
-      <Wrapper {...wrapperProps}>
+      <TouchableOpacity {...wrapperProps}>
         {fields.map(item => (
           <Field
             focused={focusedId === item.id}
@@ -44,7 +46,7 @@ const App: React.FC = () => {
             <Value>{item.value}</Value>
           </Field>
         ))}
-      </Wrapper>
+      </TouchableOpacity>
       <TextInput {...inputProps} /> {/* Add this TextInput to handle input value */}
     </Container>
   );
